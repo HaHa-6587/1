@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高考结束大学生活体验活动</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+            font-family: '微软雅黑', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #22223b;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(60, 60, 100, 0.08);
+            padding: 36px 28px 32px 28px;
+        }
+        .title {
+            font-size: 2.1em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 18px;
+            color: #5f27cd;
+        }
+        .highlight {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+        .section {
+            margin: 18px 0 10px 0;
+        }
+        .list {
+            margin: 0 0 0 1.2em;
+            padding: 0;
+        }
+        .list li {
+            margin-bottom: 8px;
+            font-size: 1.08em;
+        }
+        .note {
+            background: #e0e7ff;
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin: 18px 0 10px 0;
+            color: #22223b;
+            font-size: 1.05em;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            color: #888;
+            font-size: 0.98em;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        .cta {
+            display: block;
+            margin: 24px auto 0 auto;
+            background: #5f27cd;
+            color: #fff;
+            font-size: 1.15em;
+            padding: 12px 0;
+            border: none;
+            border-radius: 8px;
+            width: 80%;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cta:hover {
+            background: #341f97;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">🎉🎉高考结束的宝宝们看过来啦‼‼‼</div>
+        <div class="section">
+            <span class="emoji">❓</span>暑假太长在家无聊？<br>
+            <span class="emoji">❓</span>未入大学略显焦虑？<br>
+            <span class="emoji">❓</span>充实自己无从下手？
+        </div>
+        <div class="note">
+            现限时推出<span class="highlight">大学生活免费体验活动</span><br>
+            名额有限 <span class="emoji">㊙㊙</span><br>
+            面向全体高中毕业生<span class="emoji">🆓</span><br>
+            闲着也是闲着，不如提前感受大学生活！
+        </div>
+        <div class="section">
+            <span class="emoji">❌</span>年龄要求<br>
+            <span class="emoji">❌</span>分数限制<br>
+            <span class="emoji">⭕</span>人来就行<br>
+            <span class="emoji">⭕️</span>免费体验工科生
+        </div>
+        <div class="section">
+            <b>内容</b>
+            <ul class="list">
+                <li>📙【线性代数】考试🖊</li>
+                <li>📙【大学物理】考试🖊</li>
+                <li>📙【高等数学（二）】考试🖊</li>
+                <li>📙【大学英语（二）】考试🖊</li>
+                <li>📙【中国近现代史纲要】考试🖊</li>
+                <li>📙【JAVA程序设计理论】考试🖊</li>
+                <li>📙【JAVA程序设计实训】考试🖊</li>
+            </ul>
+        </div>
+        <div class="section">
+            <ul class="list">
+                <li>学习5天后可参加真实大学期末考试检验学习成果</li>
+                <li>沉浸式大学体验🎉（附赠食堂体验）</li>
+                <li>路费自备 住宿费包（住我宿舍睡我床）</li>
+            </ul>
+        </div>
+        <div class="note">
+            我的大学你来上<br>
+            我的期末你来考<br>
+            你的暑假我来过🥰
+        </div>
+        <div class="section">
+            <b>6.10日起报道</b><br>
+            <span style="color:#e17055;font-weight:bold;">6.15报名截止</span><br>
+            <span class="highlight">‼名额有限 先到先得</span><br>
+            <span class="emoji">👉</span>戳本人头像了解更多
+        </div>
+        <button class="cta" onclick="showModal()">立即报名/了解更多</button>
+        <div class="footer">
+            &copy; 2025 大学生活体验活动
+        </div>
+        <!-- 收款码模态框 -->
+        <div id="qrcode-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;">
+            <div style="background:#fff;padding:24px 18px 18px 18px;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.15);text-align:center;position:relative;max-width:90vw;max-height:90vh;">
+                <span style="position:absolute;right:12px;top:8px;font-size:1.5em;cursor:pointer;color:#888;" onclick="hideModal()">&times;</span>
+                <div style="font-size:1.15em;margin-bottom:12px;">请扫码支持/报名</div>
+                <img src="images/qrcode.jpg" alt="收款码" style="max-width:60vw;max-height:60vh;border-radius:8px;box-shadow:0 1px 8px rgba(0,0,0,0.08);">
+                <div style="margin-top:10px;color:#888;font-size:0.98em;">如无法识别请长按图片保存</div>
+            </div>
+        </div>
+        <script>
+        function showModal() {
+            document.getElementById('qrcode-modal').style.display = 'flex';
+        }
+        function hideModal() {
+            document.getElementById('qrcode-modal').style.display = 'none';
+        }
+        // 兼容ESC关闭
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') hideModal();
+        });
+        </script>
+    </div>
+</body>
+</html> 
